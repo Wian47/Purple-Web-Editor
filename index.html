@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Code Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="left-header">
+            <div class="logo">Web Code Editor</div>
+            <button class="new-btn" title="New Project (Ctrl+N)"><i class="fas fa-plus"></i> New</button>
+            <button class="save-btn" title="Save Project (Ctrl+S)"><i class="fas fa-save"></i> Save</button>
+            <button class="download-btn" title="Download as ZIP"><i class="fas fa-download"></i> Download</button>
+        </div>
+        <div class="right-header">
+            <button id="runBtn"><i class="fas fa-play"></i> Run</button>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="file-tree">
+                <div class="file active">index.html</div>
+                <div class="file">styles.css</div>
+                <div class="file">script.js</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="editor-section">
+                <div class="tabs">
+                    <div class="tab active" data-lang="html">HTML</div>
+                    <div class="tab" data-lang="css">CSS</div>
+                    <div class="tab" data-lang="javascript">JavaScript</div>
+                </div>
+                <div class="editors">
+                    <div class="editor active" id="html-container">
+                        <textarea id="htmlEditor"></textarea>
+                    </div>
+                    <div class="editor" id="css-container">
+                        <textarea id="cssEditor"></textarea>
+                    </div>
+                    <div class="editor" id="javascript-container">
+                        <textarea id="jsEditor"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="output-section">
+                <div class="output-tabs">
+                    <div class="output-tab active">Output</div>
+                    <div class="output-tab">Console</div>
+                </div>
+                <div class="output-content">
+                    <iframe id="preview"></iframe>
+                    <div id="console" class="console"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/css/css.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

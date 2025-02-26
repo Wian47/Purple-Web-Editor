@@ -1,0 +1,28 @@
+{
+  "name": "purple-web-editor",
+  "version": "1.0.0",
+  "description": "A beautiful, dark purple-themed web-based code editor with real-time preview",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"No tests specified\""
+  },
+  "keywords": [
+    "code-editor",
+    "web-editor",
+    "html",
+    "css",
+    "javascript",
+    "preview",
+    "live-preview"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "codemirror": "^5.65.2",
+    "jszip": "^3.7.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
